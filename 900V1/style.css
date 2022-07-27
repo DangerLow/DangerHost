@@ -53,7 +53,7 @@ html, body {
     background-color: #575757;
     }
     .btn1 {
-    background-color: #000000ce;
+    background-color: #000000;
     color: rgba(255, 238, 0, 0.952);
     width: 227px;
     height: 46px;
@@ -82,10 +82,10 @@ html, body {
     background-color: #f31414;
     }
     .btn-web {
-    background-color: #076300;
+    background-color: #2fc910;
     }
     .btn-web:hover {
-    background-color: #18891b;
+    background-color: #20d326;
     }
     .btn-gtav {
     background-color: #020063;
