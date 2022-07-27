@@ -1,8 +1,12 @@
 CACHE MANIFEST 
 
 CACHE: 
-../img.jpg
-../style.css
+img.jpg
+gtav.jpg
+rdr2.jpg
+style.css
+gtav.css
+rdr2.css
 app2usb.bin
 backup.bin
 disable-aslr.bin
@@ -22,9 +26,14 @@ fan-threshold75.bin
 frontend.js
 ftp.bin
 goldhen_2.1.2.bin
+goldhen_2.2.2.bin
 goldhen_2.3b2.bin
 history-blocker.bin
 index.html
+Linux.html
+index2.html
+Gtav.html
+Rdr2.html
 int64.js
 kernel-dumper.bin
 kexploit.js
