@@ -52,7 +52,7 @@ html, body {
     .btn:hover {
     background-color: #575757;
     }
-    .btn1 {
+    .btn-primary ml-2 {
     background-color: #000000ce;
     color: rgba(255, 238, 0, 0.952);
     width: 227px;
@@ -71,6 +71,22 @@ html, body {
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 8px;
+    }
+    #clock{
+        float:right;
+        margin-right:2.25%;
+        margin-top: 18px;
+        font-weight:bold;
+        font-size:28px;
+         color: rgb(0, 0, 0);
+    }
+       #date {
+        float:left;
+        margin-left:1.25%;
+        font-weight:bold;
+        margin-top: 18px;
+        font-size:28px;
+        color: rgb(0, 0, 0);
     }
     .btn1:hover {
     background-color: #575757;
