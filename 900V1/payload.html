@@ -28,7 +28,19 @@ function getHashParams()
 
 function done()
 {
-    history.pushState({}, '', 'online.html');
+    history.pushState({}, '', 'Gtav.html');
+    if(main_ret == 0 || main_ret == 179)
+    {
+        alert("You're all set!");
+        setTimeout(function() { read_ptr_at(0); }, 1);
+    }
+    else
+        alert("Jailbreak is not activated.");
+}
+
+function done()
+{
+    history.pushState({}, '', 'Rdr2.html');
     if(main_ret == 0 || main_ret == 179)
     {
         alert("You're all set!");
