@@ -9,10 +9,26 @@
 </head>
 <body>
 <script>
+    function showdate() {
+  var dt = new Date();
+    Hour= dt.getHours();
+  Minute= dt.getMinutes();
+     Day=dt.getDate();
+   Month=dt.getMonth()+1;
+   Year=dt.getFullYear();
+if (Minute < 10) { Minute = "0" + Minute; };
+if (Hour < 10) { Hour = "0" + Hour; };
+document.getElementById("date").innerHTML = (Month+"/"+Day+"/"+Year);
+document.getElementById("clock").innerHTML = (Hour+":"+Minute);
+  }
+  
+  setInterval(showdate,0);
+</script>
+<script>
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));document.getElementById="display:none";window.msgs.innerHTML="Instalando Cache Ofline: " + Percent + "%";}
 function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Instalado Exitosamente ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Ahora Cierra y Vuelva Abrir El Navegador";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </script>
-<h1 id="msgs"> Danger Host </h1>
+<span id="date" ></span><span id="clock" ></span><h1 style='font-size:25px;text-align:center;color:#ff0707;'><h1 id="msgs"> <b>Danger Host</b> </h1></h1>
 <hr>
 <br>
 <h1 style="font-size:22px;color:yellow;">GoldHEN</h1>
