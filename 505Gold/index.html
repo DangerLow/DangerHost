@@ -1,1 +1,495 @@
+<html manifest="offlinexmb.cache"><!--  -->
+<head>
+  <style>  body {
+    background-image: url("img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+</style>
+<meta charset="utf-8">
+<title>Danger Host Gold 5.05 FW</title>
+<style type="text/css">
+html, body {
+margin: 0;
+height: 100%;
+padding: 0;
+overflow: hidden;
+font-family: sans-serif;
+font-size: 20px;
+font-weight: bold;
+text-align: center;  
+width: 100%;
+overflow: hidden;
+}
+#head {
+ font-weight:bold;
+ font-size:20px;
+ color: white;
+  margin-right:10%;
+}
+ button {
+  background:rgba(0,0,0,0.5);
+			box-shadow: none;
+            border: none;
+            border-radius: 15px;
+            width: 220px;
+            height: 43px;            
+            text-align: center;
+}
+button:hover {
+            box-shadow: 0 5px 50px 0 rgb(255, 31, 31);
+            color: white;
+            border-radius: 15px;
+			background-color: #1f1f20;
+}
+header{
+	height: 3em;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+#clock{
+ float:right;
+ margin-right:2.25%;
+ margin-top: 0px;
+ font-weight:bold;
+ font-size:20px;
+  color: white;
+}
+#date {
+ float:left;
+ margin-left:1.25%;
+ font-weight:bold;
+ margin-top: 5px;
+ font-size:20px;
+ color: white;
+}
+#donate2{
+ float:right;
+ margin-right:2.25%;
+ margin-top: 0px;
+ font-weight:bold;
+ font-size:28px;
+  color: white;
+}
+#donate {
+ float:left;
+ margin-left:1.60%;
+ font-weight:bold;
+ margin-top: 0px;
+ font-size:28px;
+ color: white;
+}
+#msgs2 {
+ font-weight:bold;
+ font-size:20px;
+}
+#msgs {
+ font-weight:bold;
+ font-size:20px;
+}
+header div{
+	height: 100%;
+	display: ruby-text;
+	margin-top: -1.5em;
+ }
+  .content {
+  width:80%;
+  margin-left:7.5%;
+  background:rgba(0,0,0,0.5);
+  color:white;
+  margin-top:0%;
+  font-size:25px;
+  text-align:center;
+  border-radius:30px;
+  padding:20px;
+  line-height:20px;
+ }
+ .title {
+  font-size:40px;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-weight:bolder;
+  margin-bottom:10px;
+ }
+</style>
+<script src="cal.js"></script>
+<script>
+  window.applicationCache.ondownloading=function(){document.getElementById("msgs2").innerHTML="Iniciando Descarga Cache!!"};
+  window.applicationCache.onprogress=function(a){document.getElementById("msgs2").innerHTML="Estado De Descarga: "+(Math.round(100*(a.loaded/a.total)))+ "%";};
+  window.applicationCache.oncached=function(){document.getElementById("msgs2").innerHTML="Cache Instalado Exitosamente ✔";setTimeout(function(){document.getElementById("msgs2").innerHTML="Ahora Vuelva Abrir El Navegador !!"; }, 1500);};
+</script>
+</head>
+<body style='background-color:#1A1920'>
+<br>
+<span style='text-shadow: 4px 6px 3px black;' id="date" ></span><span style='text-shadow: 4px 6px 3px black;' id="clock" ></span>
+<h1 id=msgs style='font-size:25px;text-shadow: 4px 4px 4px black;text-align:center;text-shadow: 4px 4px 4px black;color:rgb(255, 0, 0);'>Danger Host</h1>
+<h1 id=msgs2 style='font-size:25px;text-shadow: 4px 4px 4px black;text-align:center;text-shadow: 4px 4px 4px black;color:white;'>Estado</h1>
+<div id=loader1></div><div id=loader2></div>
+<div id=loader3 style='font-size:25px;text-shadow: 4px 4px 4px black;text-align:center;text-shadow: 4px 4px 4px black;color:white;display:none'>Cargando...</div><div id=done1 class="info"></div>
+<div id=done2 class="info" style=display:none></div>
+<div id=done3 class="info" style=display:none></div><br><div class=ib></div>
+<div id=fail class=info style=display:none></div>
+<br>
+<div id=all style="text-align:center">
+<button style='font-size:23px;text-align:center;background-color:#FFFF00;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='GoldHen v2.1.2 por Sistro Para Fw 5.05'"; onmouseout="msgs2.innerHTML='Estado'" onclick="load_goldhen212();"> <b>GoldHenV2.1.2</b> </button>
+<button style='font-size:23px;text-align:center;background-color:#FFFF00;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='GoldHen v2.2.2 por Sistro Para Fw 5.05'"; onmouseout="msgs2.innerHTML='Estado'" onclick="load_goldhen22();"> <b>GoldHenV2.2.2</b> </button>
+<button style='font-size:23px;text-align:center;background-color:red;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Orbis Toolbox Loader Alfa 1190'"; onmouseout="msgs2.innerHTML='Estado'" onclick="load_orbis();">&nbsp;&nbsp;<b>Orbis Toolbox</b>&nbsp;&nbsp; </button>
+<br><br>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Copie Archivos json Del USB A La PS4'"; onmouseout="msgs2.innerHTML='Estado'" onclick="load_copych();"> <b>Cheat Copy</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='WebRTE Para Trucos De Juegos Fw 5.05'"; onmouseout="msgs2.innerHTML='Estado'" onclick="load_webrte();"> <b>WebRTE</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Save Data mounter v1.0'"; onmouseout="msgs2.innerHTML='Estado'" onclick="load_ps4debug();"> <b>PS4debug</b> </button>
+<br><br>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Goldhen & Hen & Mira'"; onmouseout="msgs2.innerHTML='Estado'" onclick="allhens();"> <b>HEN Group</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Todos Los Payloads De Herramientas'"; onmouseout="msgs2.innerHTML='Estado'" onclick="alltools();"> <b>Tools Group</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Todos Los Payloads De Restore & Backup'"; onmouseout="msgs2.innerHTML='Estado'" onclick="allrestore();"> <b>Restore Group</b> </button>
+<br><br>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Todos Los Payloads De Dumper'"; onmouseout="msgs2.innerHTML='Estado'" onclick="alldump();"> <b>Dump Group</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Todos Los Payloads De Linux'"; onmouseout="msgs2.innerHTML='Estado'" onclick="alllinux();"> <b>Linux Group</b> </button>
+<br><br>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;width: 350px;height: 45px;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Todos Los Mods De GTAV y RDR2'"; onmouseout="msgs2.innerHTML='Estado'" onclick="allmods();"> <b>Mods De GTAV Y RDR2</b> </button>
+<br>
+</div>
+<div id=tools style="text-align:center;display:none">
+<button style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Volver Al Menu Principal'"; onmouseout="msgs2.innerHTML='Herramientas'" onclick="backall();"> <b>Volver Al Menu</b> </button>
+<br><br>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='binloader port 9023'"; onmouseout="msgs2.innerHTML='Herramientas'" onclick="load_binloader();"> <b>Bin Loader</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='FTP server'"; onmouseout="msgs2.innerHTML='Herramientas'" onclick="load_ftp();">&nbsp; <b>FTP</b> &nbsp;</button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Servidor FTP Con RW'"; onmouseout="msgs2.innerHTML='Herramientas'" onclick="load_ftprw();"> <b>FTP RW</b> </button>
+<br><br>
+<button style='font-size:22px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='ReactPSPlus Por Zer0xFF / Al Azif for FW Fw 5.05'"; onmouseout="msgs2.innerHTML='Herramientas'" onclick="load_react();"> <b>ReactPSplus</b> </button>
+<button style='font-size:22px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='DeactPSPlus Por Zer0xFF / Al Azif for FW Fw 5.05'"; onmouseout="msgs2.innerHTML='Herramientas'" onclick="load_deact();"> <b>DeactPSplus</b> </button>
+<button style='font-size:22px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='ReactPSPlus Moddable v1.0 Por Zer0xFF/Leeful Fw 5.05'"; onmouseout="msgs2.innerHTML='Herramientas'" onclick="load_reactM();"> <b>ReactPSplusMOD</b> </button>
+<br><br>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Deshabilitar Actualización'"; onmouseout="msgs2.innerHTML='Herramientas'" onclick="load_updatesdisable();"> <b>Disable Updates</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Habilitar Actualización'"; onmouseout="msgs2.innerHTML='Herramientas'" onclick="load_updatesenable();"> <b>Enable Updates</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Cambiar Licencia Hen a Mira'"; onmouseout="msgs2.innerHTML='Herramientas'" onclick="load_rif();"> <b>Rif Renamer</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Controlador De Ventilador'"; onmouseout="msgs2.innerHTML='Herramientas'" onclick="load_fanthresh();"> <b>Fan Controller</b></button>
+<br><br>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Juego Remoto Activo'"; onmouseout="msgs2.innerHTML='Herramientas'" onclick="load_ren();"> <b>Remoteplay</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Instalar Juegos Desde LAN'"; onmouseout="msgs2.innerHTML='Herramientas'" onclick="load_infinix();"> <b>Infinix</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='To-DEX'"; onmouseout="msgs2.innerHTML='Herramientas'" onclick="load_todex();"> <b>ToDex</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='APP2USB'"; onmouseout="msgs2.innerHTML='Herramientas'" onclick="load_app2usb();"> <b>App2USB</b> </button>
+<br><br>
+<button style='font-size:22px;text-align:center;background-color:red;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Orbis Toolbox Loader Alfa 1190'"; onmouseout="msgs2.innerHTML='Herramientas'" onclick="load_orbis();">&nbsp;&nbsp;<b>Orbis.Toolbox</b>&nbsp;&nbsp; </button>
+<button style='font-size:22px;text-align:center;background-color:red;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Redirector De Archivos De La Aplicación Orbis (PS4) Para Editar Archivos En El Juego Fácilmente Por TheoryWrong'"; onmouseout="msgs2.innerHTML='Herramientas'" onclick="load_orbisafr();">&nbsp;&nbsp;<b>Orbis.AFR</b>&nbsp;&nbsp; </button>
+</div>
+<div id=dump style="text-align:center;display:none">
+<button style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Volver Al Menu Principal'"; onmouseout="msgs2.innerHTML='Estado'" onclick="backall();"> <b>Volver Al Menu</b> </button>
+<br><br>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs.innerHTML='PS4 PKG Backup Pot Kameleon'"; onmouseout="msgs.innerHTML='Estado'" onclick="load_pkgb(); return false"> <b>PKG Backup</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Kernel Dumper'"; onmouseout="msgs2.innerHTML='Estado'" onclick="load_kdumper();"> <b>Kernel Dumper</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Dumper Para Juegos'"; onmouseout="msgs2.innerHTML='Estado'" onclick="load_dumper();"> <b>Dumper</b> </button>
+</div>
+<div id=restore style="text-align:center;display:none">
+<button style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Volver Al Menu Principal'"; onmouseout="msgs2.innerHTML='Restore & Backup'" onclick="backall();"> <b>Volver Al Menu</b> </button>
+<br><br>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Backup Trophy'"; onmouseout="msgs2.innerHTML='Restore & Backup'" onclick="load_trpb();"> <b>Trp Backup</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Restore Trophy'"; onmouseout="msgs2.innerHTML='Restore & Backup'" onclick="load_trpr();"> <b>Trp Restore</b> </button>
+<br><br>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='DB Backup'"; onmouseout="msgs2.innerHTML='Restore & Backup'" onclick="load_dbBackup();"> <b>DB Backup</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='DB Restore'"; onmouseout="msgs2.innerHTML='Restore & Backup'" onclick="load_dbRestore();"> <b>DB Restore</b> </button>
+<br><br>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Guardar Partidas De Juegos'"; onmouseout="msgs2.innerHTML='Restore & Backup'" onclick="load_saveb();"> <b>Save Backup</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Restaurar Partidas Guardadas'"; onmouseout="msgs2.innerHTML='Restore & Backup'" onclick="load_saver();"> <b>Save Restore</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Save Mount'"; onmouseout="msgs2.innerHTML='Restore & Backup'" onclick="load_savem();"> <b>Save Mount</b></button>
+</div>
+<div id=linux style="text-align:center;display:none">
+<button style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Volver Al Menu Principal'"; onmouseout="msgs2.innerHTML='Linux'" onclick="backall();"> <b>Volver Al Menu</b> </button>
+<br><br>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Linux Loader 1GB'"; onmouseout="msgs2.innerHTML='Linux'" onclick="load_linux1g();"> <b>Linux 1Gb</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Linux Loader 2GB'"; onmouseout="msgs2.innerHTML='Linux'" onclick="load_linux2g();"> <b>Linux 2Gb</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Linux Loader 3GB'"; onmouseout="msgs2.innerHTML='Linux'" onclick="load_linux3g();"> <b>Linux 3Gb</b> </button>
+</div>
+<div id=gtav style="text-align:center;display:none">
+<button style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Volver Al Menu Principal'"; onmouseout="msgs2.innerHTML='Mods De Grand Theft Auto V y Red Dead Redemption 2'" onclick="backall();"> <b>Volver Al Menu</b> </button>
+<br><br>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='GTA Mod Menu 1.27 Por ArabicGuy '"; onmouseout="msgs2.innerHTML='Mods De Grand Theft Auto V y Red Dead Redemption 2'" onclick="load_gtava127();"> <b>ArabicGuy 1.27</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='GTA Mod Menu 1.32 Por ArabicGuy '"; onmouseout="msgs2.innerHTML='Mods De Grand Theft Auto V y Red Dead Redemption 2'" onclick="load_gtava132();"> <b>ArabicGuy 1.32</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='GTA Mod Menu 1.33 Por ArabicGuy '"; onmouseout="msgs2.innerHTML='Mods De Grand Theft Auto V y Red Dead Redemption 2'" onclick="load_gtava133();"> <b>ArabicGuy 1.33</b> </button>
+<br><br>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='GTA Mod Menu Por Lotus -> + []'"; onmouseout="msgs2.innerHTML='Mods De Grand Theft Auto V y Red Dead Redemption 2'" onclick="load_gtav();"> <b>GTA Lotus 1.04</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='GTA Mod Menu Por Hold R1 + []'"; onmouseout="msgs2.innerHTML='Mods De Grand Theft Auto V y Red Dead Redemption 2'" onclick="load_gtav2();"> <b>GTAV ap 2</b> </button>
+<br><br>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='GTAV Expulsion Mode Menu 1.32 v1.1 Por x_WildeModz_x'"; onmouseout="msgs2.innerHTML='Mods De Grand Theft Auto V y Red Dead Redemption 2'" onclick="load_gtavwm132();"> <b>GTAV WildeModz 1.32</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='GTAV Expulsion Mode Menu 1.33 v1.1 Por x_WildeModz_x'"; onmouseout="msgs2.innerHTML='Mods De Grand Theft Auto V y Red Dead Redemption 2'" onclick="load_gtavwm133();"> <b>GTAV WildeModz 1.33</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='GTAV Expulsion Mode Menu 1.38 v1.7 Por x_WildeModz_x'"; onmouseout="msgs2.innerHTML='Mods De Grand Theft Auto V y Red Dead Redemption 2'" onclick="load_gtavwm138();"> <b>GTAV WildeModz 1.38</b> </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='GTAV Lamance v9.00 Mode Menu Para 1.38 Por david1337hax'"; onmouseout="msgs2.innerHTML='Mods De Grand Theft Auto V y Red Dead Redemption 2'" onclick="load_gtavl9();"> <b>GTAV Lamance 1.38</b> </button>
+<br><br>
+<button style='font-size:23px;text-align:center;background-color:red;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Red Dead Redemtion 2 Mod Menu V1.00 Por RF0oDxM0Dz (R1 + Square)'"; onmouseout="msgs2.innerHTML='Mods De Grand Theft Auto V y Red Dead Redemption 2'" onclick="load_rdr100();"> <b>RDR2 V1.00</b> </button>
+<button style='font-size:23px;text-align:center;background-color:red;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Red Dead Redemtion 2 Mod Menu V1.13 Por RF0oDxM0Dz (R1 + Square)'"; onmouseout="msgs2.innerHTML='Mods De Grand Theft Auto V y Red Dead Redemption 2'" onclick="load_rdr113();"> <b>RDR2 V1.13</b> </button>
+<button style='font-size:23px;text-align:center;background-color:red;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Red Dead Redemtion 2 Mod Menu V1.19 Por RF0oDxM0Dz (R1 + Square)'"; onmouseout="msgs2.innerHTML='Mods De Grand Theft Auto V y Red Dead Redemption 2'" onclick="load_rdr119();"> <b>RDR2 V1.19</b> </button>
+<button style='font-size:23px;text-align:center;background-color:red;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Red Dead Redemtion 2 Mod Menu V1.24 Por RF0oDxM0Dz (R1 + Square)'"; onmouseout="msgs2.innerHTML='Mods De Grand Theft Auto V y Red Dead Redemption 2'" onclick="load_rdr124();"> <b>RDR2 V1.24</b> </button>
+<button style='font-size:23px;text-align:center;background-color:red;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Red Dead Redemtion 2 Mod Menu V1.29 Por RF0oDxM0Dz (R1 + Square)'"; onmouseout="msgs2.innerHTML='Mods De Grand Theft Auto V y Red Dead Redemption 2'" onclick="load_rdr129();"> <b>RDR2 V1.29</b> </button>
+<button style='font-size:23px;text-align:center;background-color:red;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Red Dead Redemtion 2 Mod Menu V1.29 Por 0x199'"; onmouseout="msgs2.innerHTML='Mods De Grand Theft Auto V y Red Dead Redemption 2'" onclick="load_rdr129H();"> <b>RDR2 Havana V1.29</b> </button>
+</div>
+<div id=hens style="text-align:center;display:none">
+<button style='font-size:20px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Volver Al Menu Principal'"; onmouseout="msgs2.innerHTML='GoldHen, Hen y Mira'" onclick="backall();"> <b>Volver Al Menu</b> </button>
+<br><br>
+<button style='font-size:23px;text-align:center;background-color:#FFFF00;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='GoldHen v1.0 Por Sistro'"; onmouseout="msgs2.innerHTML='GoldHen, Hen y Mira'" onclick="load_goldhen1();">&nbsp;&nbsp;<b>GoldHenV1.0</b>&nbsp;&nbsp; </button>
+<button style='font-size:23px;text-align:center;background-color:#FFFF00;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='GoldHen v1.1 Por Sistro'"; onmouseout="msgs2.innerHTML='GoldHen, Hen y Mira'" onclick="load_goldhen11();">&nbsp;&nbsp;<b>GoldHenV1.1</b>&nbsp;&nbsp; </button>
+<button style='font-size:23px;text-align:center;background-color:#FFFF00;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='GoldHen v2.0b Por Sistro'"; onmouseout="msgs2.innerHTML='GoldHen, Hen y Mira'" onclick="load_goldhen2b();">&nbsp;&nbsp;<b>GoldHenV2.0b</b>&nbsp;&nbsp; </button>
+<button style='font-size:23px;text-align:center;background-color:#FFFF00;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='GoldHen v2.0b2 Por Sistro'"; onmouseout="msgs2.innerHTML='GoldHen, Hen y Mira'" onclick="load_goldhen2b2();">&nbsp;&nbsp;<b>GoldHenV2.0b2</b>&nbsp;&nbsp; </button>
+<br><br>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Hen 2.1.2'"; onmouseout="msgs2.innerHTML='GoldHen, Hen y Mira'" onclick="load_hen212();">&nbsp;&nbsp;<b>Hen v2.1.2</b>&nbsp;&nbsp; </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Hen 2.1.3'"; onmouseout="msgs2.innerHTML='GoldHen, Hen y Mira'" onclick="load_hen213();">&nbsp;&nbsp;<b>v2.1.3</b>Hen &nbsp;&nbsp; </button>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Hen 2.1.4b Spoof to 9.99 Por Karo'"; onmouseout="msgs2.innerHTML='GoldHen, Hen y Mira'" onclick="load_hen214b();">&nbsp;&nbsp;<b>Hen v2.1.4b</b>&nbsp;&nbsp; </button>
+<br><br>
+<button style='font-size:23px;text-align:center;text-shadow: 4px 4px 4px black;color:white' class="pointer" onMouseOver="msgs2.innerHTML='hen+mira'"; onmouseout="msgs2.innerHTML='GoldHen, Hen y Mira'" onclick="load_mirahen();">&nbsp;&nbsp;<b>MiraHen18</b>&nbsp;&nbsp; </button>
+</div>
+<br><br>
+  <h1 style='text-shadow: 4px 4px 4px black;font-size:30px;text-align:center;text-shadow: 4px 4px 4px black;color:rgb(255, 255, 255);margin-top:1%;'>Creditos:<a href="https://www.instagram.com/dxnger20/" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@Dxnger20</h1>
+ </div>
+<script>
+function getScript(source,callback){var gs = document.createElement('script');gs.src = source;gs.onload = callback;gs.async = false;document.body.appendChild(gs);}
+function loadScript(){getScript('exploit.js',function(){setTimeout(exploit,1000);});}
+function loadScript2(){getScript('exploit_bin_x2.js',function(){setTimeout(exploit,1000);});}
+function loadScript3(){getScript('exploit_bin_x3.js',function(){setTimeout(exploit,1000);});}
+function loadScriptb(){getScript('binloader.js',function(){setTimeout(exploit,1000);});}
+function anim(){document.getElementById('loader3').style.display='block';document.getElementById('done2').style.display='block';}
+function allset() {
+window.msgs2.innerHTML="Payload Loaded";
+}
 
+function failload() {
+alert("Error Loading. try again");
+}
+
+function Binset() {
+window.msgs2.innerHTML="Payload Loaded. Send payloads to port 9020";
+alert("Payload Loaded. Send payloads to port 9020");
+}
+function load_copych(){
+  bin="CopyCH.bin";loadScript();anim();
+}
+function load_goldhen1(){
+  bin="goldhen505v1.bin";loadScript();anim();
+}
+function load_goldhen11(){
+  bin="goldhen505v1.1.bin";loadScript();anim();
+}
+function load_goldhen2b(){
+  bin="goldhen2b505.bin";loadScript();anim();
+}
+function load_goldhen2b2(){
+  bin="goldhen2b2505.bin";loadScript();anim();
+}
+function load_goldhen212(){
+  bin="goldhen_212_505.bin";loadScript();anim();
+}
+function load_goldhen22(){
+  bin="goldhen_2.2.2_505.bin";loadScript();anim();
+}
+function load_hen212(){
+  bin="hen212.bin";loadScript();anim();
+}
+function load_hen213(){
+  bin="hen213.bin";loadScript();anim();
+}
+function load_hen214b(){
+  bin="hen214b.bin";loadScript();anim();
+}
+function load_mirahen(){
+  bin1="Mira.bin";bin2="Hen19Mira.bin";loadScript2();anim();
+}
+function load_orbisafr(){
+bin1="Mira.bin";bin2="OrbisAFR.bin";bin3="Hen19Mira.bin";loadScript3();anim();
+}
+function load_binloader(){
+loadScriptb();anim();
+}
+function load_react(){
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'react1.html';
+        link.target = '_blank';
+        link.click();
+}
+function load_deact(){
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'deact1.html';
+        link.target = '_blank';
+        link.click();
+}
+function load_reactM(){
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'reactM.html';
+        link.target = '_blank';
+        link.click();
+}
+function load_ftp(){
+  bin="FTP.bin";loadScript();anim();
+}
+function load_ftprw(){
+  bin="FTPRW.bin";loadScript();anim();
+}
+function load_dumper(){
+  bin="Dumper.bin";loadScript();anim();
+}
+function load_app2usb(){
+  bin="AppToUsb.bin";loadScript();anim();
+}
+function load_updatesdisable(){
+  bin="UpdatesDisable.bin";loadScript();anim();
+}
+function load_updatesenable(){
+  bin="UpdatesEnable.bin";loadScript();anim();
+}
+function load_dbBackup(){
+  bin="Database_Backup.bin";loadScript();anim();
+}
+function load_pkgb(){
+  bin="pkg-backup.bin";loadScript();anim();
+}
+function load_kdumper(){
+  bin="kdamper.bin";loadScript();anim();
+}
+function load_dbRestore(){
+  bin="Database_Restore.bin";loadScript();anim();
+}
+function load_todex(){
+  bin="todex.bin";loadScript();anim();
+}
+function load_ps4debug(){
+  bin="ps4debug100.bin";loadScript();anim();
+}
+function load_webrte(){
+  bin="webrte.bin";loadScript();anim();
+}
+function load_linux1g(){
+  bin="Linux1GB.bin";loadScript();anim();
+}
+function load_linux2g(){
+  bin="Linux2GB.bin";loadScript();anim();
+}
+function load_linux3g(){
+  bin="Linux3GB.bin";loadScript();anim();
+}
+function load_fanthresh(){
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'FanControl.html';
+        link.target = '_blank';
+        link.click();
+}
+function load_rif(){
+  bin="RifRenamer.bin";loadScript();anim();
+}
+function load_gtav(){
+  bin="gta_v_lotus104.bin";loadScript();anim();
+}
+function load_gtav2(){
+  bin="gta_v_ap_ii_intense.bin";loadScript();anim();
+}
+function load_gtava127(){
+  bin="gtava127.bin";loadScript();anim();
+}
+function load_gtava132(){
+  bin="gtava132.bin";loadScript();anim();
+}
+function load_gtava133(){
+  bin="gtava133.bin";loadScript();anim();
+}		
+function load_gtavwm132(){
+  bin="WildeModz-1.32.bin";loadScript();anim();
+}
+function load_gtavwm133(){
+  bin="WildeModz-1.33.bin";loadScript();anim();
+}
+function load_gtavwm138(){
+  bin="WildeModz-1.38.bin";loadScript();anim();
+}
+function load_gtavl9(){
+  bin="Lamance9.bin";loadScript();anim();
+}
+function load_ren(){
+  bin="PS4ren.bin";loadScript();anim();
+}
+function load_infinix(){
+  bin="infinix.bin";loadScript();anim();
+}
+function load_trpb(){
+  bin="Trophy_Backup.bin";loadScript();anim();
+}
+function load_trpr(){
+  bin="Trophy_Restore.bin";loadScript();anim();
+}
+function load_saveb(){
+  bin="Save_Data_Backup.bin";loadScript();anim();
+}
+function load_saver(){
+  bin="Save_Data_Restore.bin";loadScript();anim();
+}
+function load_savem(){
+  bin="SaveMounter.bin";loadScript();anim();
+}
+function load_orbis(){
+  bin="Orbis-Toolbox-505.bin";loadScript();anim();
+}
+function load_rdr100(){
+  bin="Oysters1.00.bin";loadScript();anim();
+}
+function load_rdr113(){
+  bin="Oysters1.13.bin";loadScript();anim();
+}
+function load_rdr119(){
+  bin="Oysters1.19.bin";loadScript();anim();
+}
+function load_rdr124(){
+  bin="Oysters1.24.bin";loadScript();anim();
+}
+function load_rdr129(){
+  bin="Oysters1.29.bin";loadScript();anim();
+}
+function load_rdr129H(){
+  bin="rdr2-129-505-havana.bin";loadScript();anim();
+}
+function allhens(){
+all.style.display = "none";
+hens.style.display = "block";
+}
+function allrestore(){
+all.style.display = "none";
+restore.style.display = "block";
+}
+function alltools(){
+all.style.display = "none"
+tools.style.display = "block";
+}
+function alltrainer(){
+all.style.display = "none";
+trainer.style.display = "block";
+}
+function alldump(){
+all.style.display = "none";
+dump.style.display = "block";
+}
+function alllinux(){
+all.style.display = "none";
+linux.style.display = "block";
+}
+function allmods(){
+all.style.display = "none";
+gtav.style.display = "block";
+}
+function backall(){
+all.style.display = "block";
+hens.style.display = "none";
+restore.style.display = "none";
+tools.style.display = "none";
+dump.style.display = "none";
+linux.style.display = "none";
+gtav.style.display = "none";
+}
+</script>
+</body>
+</html>
